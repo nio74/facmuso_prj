@@ -4,24 +4,22 @@ void main() => runApp(MyApp());
   
 
 class MyApp extends StatelessWidget{
-
-final String myText = "Ciao World";
-
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-      color: Colors.orange[800],
-      padding: const EdgeInsets.all(36),
-      child:
-       Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-        Text(this.myText,textDirection: TextDirection.ltr,),
-        Text(this.myText,textDirection: TextDirection.ltr,)
-
-      ],) 
-  );
+    return MaterialApp(
+      title: "MaterialApp",
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: LoginPage()
+    );
   }
+}
+class LoginPage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Posizionamento'))
+      
+    );
 
+}
 }
